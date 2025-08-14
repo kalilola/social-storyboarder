@@ -52,6 +52,21 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				marketing: {
+					primary: 'hsl(var(--marketing-primary))',
+					secondary: 'hsl(var(--marketing-secondary))',
+					success: 'hsl(var(--marketing-success))',
+					warning: 'hsl(var(--marketing-warning))',
+					info: 'hsl(var(--marketing-info))',
+					creative: 'hsl(var(--marketing-creative))'
+				},
+				module: {
+					strategy: 'hsl(var(--module-strategy))',
+					planning: 'hsl(var(--module-planning))',
+					facebook: 'hsl(var(--module-facebook))',
+					content: 'hsl(var(--module-content))',
+					calendar: 'hsl(var(--module-calendar))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
