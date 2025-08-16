@@ -99,7 +99,7 @@ export const DashboardGrid = ({ onAddModule }: DashboardGridProps) => {
 
       <DndContext collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
         <SortableContext items={modules.map(m => m.id)} strategy={rectSortingStrategy}>
-          <div className="flex flex-wrap gap-6 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 auto-rows-fr">
             {modules.map((module) => (
               <ModuleCard
                 key={module.id}
@@ -107,7 +107,7 @@ export const DashboardGrid = ({ onAddModule }: DashboardGridProps) => {
                 title={module.title}
                 type={module.type}
                 onRemove={removeModule}
-                resizable={true}
+                className={module.type === "calendar" ? "lg:col-span-2 xl:col-span-3" : ""}
               >
                 {module.component}
               </ModuleCard>
