@@ -1,13 +1,6 @@
 import { useState } from "react";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { DashboardGrid } from "@/components/dashboard/DashboardGrid";
-import CalendarPage from "./CalendarPage";
-import StrategyPage from "./StrategyPage";
-import PlanningPage from "./PlanningPage";
-import FacebookPage from "./FacebookPage";
-import ContentPage from "./ContentPage";
-import AnalyticsPage from "./AnalyticsPage";
-import SettingsPage from "./SettingsPage";
 import { toast } from "sonner";
 
 const Index = () => {
@@ -24,19 +17,68 @@ const Index = () => {
       case "dashboard":
         return <DashboardGrid onAddModule={handleAddModule} />;
       case "calendar":
-        return <CalendarPage />;
+        return (
+          <div className="p-6">
+            <h1 className="text-2xl font-bold mb-4">Calendrier de Contenus</h1>
+            <div className="bg-card rounded-lg p-6">
+              <p className="text-muted-foreground">Vue détaillée du calendrier en développement...</p>
+            </div>
+          </div>
+        );
       case "strategy":
-        return <StrategyPage />;
+        return (
+          <div className="p-6">
+            <h1 className="text-2xl font-bold mb-4">Stratégie Marketing</h1>
+            <div className="bg-card rounded-lg p-6">
+              <p className="text-muted-foreground">Vue détaillée de la stratégie en développement...</p>
+            </div>
+          </div>
+        );
       case "planning":
-        return <PlanningPage />;
+        return (
+          <div className="p-6">
+            <h1 className="text-2xl font-bold mb-4">Planning & Tâches</h1>
+            <div className="bg-card rounded-lg p-6">
+              <p className="text-muted-foreground">Vue détaillée du planning en développement...</p>
+            </div>
+          </div>
+        );
       case "facebook":
-        return <FacebookPage />;
+        return (
+          <div className="p-6">
+            <h1 className="text-2xl font-bold mb-4">API Facebook</h1>
+            <div className="bg-card rounded-lg p-6">
+              <p className="text-muted-foreground">Configuration avancée de l'API Facebook en développement...</p>
+            </div>
+          </div>
+        );
       case "content":
-        return <ContentPage />;
+        return (
+          <div className="p-6">
+            <h1 className="text-2xl font-bold mb-4">Bibliothèque de Contenus</h1>
+            <div className="bg-card rounded-lg p-6">
+              <p className="text-muted-foreground">Gestion avancée des contenus en développement...</p>
+            </div>
+          </div>
+        );
       case "analytics":
-        return <AnalyticsPage />;
+        return (
+          <div className="p-6">
+            <h1 className="text-2xl font-bold mb-4">Analytics & Performances</h1>
+            <div className="bg-card rounded-lg p-6">
+              <p className="text-muted-foreground">Tableaux de bord analytics en développement...</p>
+            </div>
+          </div>
+        );
       case "settings":
-        return <SettingsPage />;
+        return (
+          <div className="p-6">
+            <h1 className="text-2xl font-bold mb-4">Paramètres</h1>
+            <div className="bg-card rounded-lg p-6">
+              <p className="text-muted-foreground">Configuration de l'application en développement...</p>
+            </div>
+          </div>
+        );
       default:
         return <DashboardGrid onAddModule={handleAddModule} />;
     }
